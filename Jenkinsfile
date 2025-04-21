@@ -30,7 +30,7 @@ pipeline {
             deleteDir() // Clean up the workspace after the build
         }
         success {
-            echo 'Build succeeded!!!'
+            echo 'Build successful!!!'
             // You could add notification steps here
         }
         failure {

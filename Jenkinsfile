@@ -3,17 +3,19 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'master', url: 'https://github.com/nawaf83/hello-world-java1.git'
+                git branch: 'master', url: 'https://github.com/AndySee04/hello-world-java'
             }
         }
         stage('Build') {
             steps {
-                powershell 'gradle clean build'
+                // powershell 'gradle clean build'
+                bat 'gradle build'
             }
         }
         stage('Test') {
             steps {
-                powershell 'gradle test'
+                // powershell 'gradle test'
+                bat 'gradle test'
             }
         }
         stage('Deploy') {
